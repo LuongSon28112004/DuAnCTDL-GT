@@ -38,8 +38,18 @@ class CongViec
         return time_start;
     }
 
+    void settime_start(string time)
+    {
+        time_start=time;
+    }
+
     string getten_cong_viec() const{
         return ten_cong_viec;
+    }
+
+    void setten_cong_viec(string cong_viec)
+    {
+        ten_cong_viec=cong_viec;
     }
 
     string gettinh_chat_cong_viec() const
@@ -50,6 +60,15 @@ class CongViec
     void settinh_chat_cong_viec(string tinh_chat)
     {
         tinh_chat_cong_viec=tinh_chat;
+    }
+
+    string getnoi_dung() const{
+        return noi_dung;
+    }
+
+    void setnoi_dung(string noidung) 
+    {
+        noi_dung=noidung;
     }
 
     friend istream& operator>>(istream&input,CongViec &a);

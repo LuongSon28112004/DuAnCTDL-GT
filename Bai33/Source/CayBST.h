@@ -41,6 +41,11 @@ public:
         return cnt;
     }
 
+    void setcnt(int count)
+    {
+        cnt=count;
+    }
+
     bool is_empty()
     {
         if (headBST == NULL)

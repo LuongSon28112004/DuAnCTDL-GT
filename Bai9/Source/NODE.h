@@ -17,19 +17,16 @@ private:
     friend class LinkList;
 
 public:
-    Node *operator=(Node *a)
+    Node &operator=(Node *a)
     {
+        cout << "ok e :3\n";
         if (this == a)
-            return this;
+            return *this;
+        this->sv = a->sv;
+        this->next = a->next;
+        this->prev = a->prev;
 
-        if (a != nullptr)
-        {
-            this->sv = a->sv;
-            this->next = a->next;
-            this->prev = a->prev;
-        }
-
-        return this;
+        return *this;
     }
 
     Node()

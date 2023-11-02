@@ -24,6 +24,11 @@ class NodeBST
         left=NULL;
         right=NULL;
     }
+    ~NodeBST()
+    {
+        left=NULL;
+        right=NULL;
+    }
 
     CongViecTrongNgay getcv(){
         return cv;

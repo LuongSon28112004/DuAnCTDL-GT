@@ -43,7 +43,7 @@ int main()
                     break;
                 }
                 cout << "Nhap vi tri can them vao:";
-                cin >> k;
+                getline(cin,k);
                 cin.ignore();
                 if (k == "")
                 {
@@ -62,7 +62,7 @@ int main()
             cin >> tmp;
             string k;
             cout << "Nhap Vi Tri Can Them Vao:";
-            cin >> k;
+            getline(cin,k);
             cin.ignore();
             if (k == "")
             {

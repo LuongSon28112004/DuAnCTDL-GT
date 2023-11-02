@@ -64,16 +64,16 @@ void LinkList::SapXepGiamDan()
     {
         for (Node *p = head; p->next != NULL; p = p->next)
         {
-            Node *min = p;
+            Node *max = p;
             for (Node *q = p->next; q != NULL; q = q->next)
             {
-                if (q->getsv().DiemTB < min->getsv().DiemTB)
+                if (q->getsv().DiemTB > max->getsv().DiemTB)
                 {
-                    min = q;
+                    max = q;
                 }
             }
-            sinhvien tmp = min->getsv();
-            min->setsv(p->getsv());
+            sinhvien tmp = max->getsv();
+            max->setsv(p->getsv());
             p->setsv(tmp);
         }
     }
